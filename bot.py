@@ -4,6 +4,14 @@ import os
 import aiohttp
 from google import genai
 import yt_dlp
+from flask import Flask
+
+# ফ্লাস্ক সার্ভার চালু করার জন্য যাতে Render পোর্ট পেয়ে যায়
+app = Flask(__name__)
+
+@app.route('/')
+def home():
+    return "Messenger Bot is Running!"
 
 GEMINI_API_KEY = os.environ.get("GEMINI_API_KEY")
 ai_client = genai.Client(api_key=GEMINI_API_KEY)
@@ -25,11 +33,7 @@ def get_ai_response(prompt):
     except Exception as e:
         return "আমি এখন উত্তর দিতে পারছি না।"
 
-def main():
-    print("বট সফলভাবে চালু হয়েছে এবং এআই মোডে প্রস্তুত রয়েছে!")
-    # Render সার্ভার যেন বন্ধ না হয়ে যায় সেজন্য লুপ চালিয়ে রাখা হলো
-    while True:
-        pass
-
 if __name__ == "__main__":
-    main()
+    print("বট এবং ওয়েব সার্ভার সফলভাবে চালু হচ্ছে...")
+    port = int(os.environ.get("PORT", 10000))
+    app.run(host="0.0.0.0", port=port)
