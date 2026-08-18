@@ -1,4 +1,4 @@
-fbchat-asyncio
+fbchat
 yt-dlp
 google-genai
 aiohttp
