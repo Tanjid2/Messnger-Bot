@@ -1,4 +1,0 @@
-fbchat-asyncio
-yt-dlp
-google-genai
-aiohttp
