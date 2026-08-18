@@ -51,8 +51,8 @@ class MessengerBot(Client):
 
 def main():
     print("বট লগইন হচ্ছে...")
-    # ইমেইল এবং পাসওয়ার্ড সঠিকভাবে পাস করার জন্য
-    bot = MessengerBot(email=FB_EMAIL, password=FB_PASSWORD)
+    # এখানে email= বা password= কিওয়ার্ড বাদ দিয়ে সরাসরি পাস করা হয়েছে
+    bot = MessengerBot(FB_EMAIL, FB_PASSWORD)
     print("বট সফলভাবে চালু হয়েছে এবং মেসেজের জন্য প্রস্তুত!")
     bot.listen()
 
