@@ -2,7 +2,7 @@ import asyncio
 from datetime import datetime
 import os
 import aiohttp
-from fbchat import Client, Message, ThreadType
+from fbchat import Client, Message
 import yt_dlp
 from google import genai
 
